@@ -111,7 +111,7 @@ class apt(
 
   include common::moduledir
   $apt_base_dir = "${common::moduledir::module_dir_path}/apt"
-  modules_dir { 'apt': }
+  common::module_dir { 'apt': }
 
   if $::custom_key_dir {
     file { "${apt_base_dir}/keys.d":
